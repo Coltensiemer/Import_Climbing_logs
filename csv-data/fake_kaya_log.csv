@@ -1,11 +1,21 @@
-datee,stiffness,rating,ascent_type,grade,color,climb_name,gym,location,country
-Sat Jun 21 2025 07:21:46 GMT-0400 (Eastern Daylight Time),1,4,Flash,v12,White,Sloper City,Climb Central,Austin,USA
-Sat Jun 21 2025 07:21:46 GMT-0400 (Eastern Daylight Time),3,4,Redpoint,5.13c,Orange,Dyno King,The Wall,Denver,USA
-Sat Jun 21 2025 07:21:46 GMT-0400 (Eastern Daylight Time),3,3,Onsight,5.13d,Blue,Sloper City,Climb Central,Seattle,Canada
-Sat Jun 21 2025 07:21:46 GMT-0400 (Eastern Daylight Time),3,2,Onsight,5.12b,Black,Sloper City,The Wall,Denver,UK
-Sat Jun 21 2025 07:21:46 GMT-0400 (Eastern Daylight Time),3,4,Onsight,v15,Green,Crimp Fest,Peak Pursuit,Denver,USA
-Sat Jun 21 2025 07:21:46 GMT-0400 (Eastern Daylight Time),3,4,Flash,5.10c,White,Crimp Fest,The Wall,Seattle,UK
-Sat Jun 21 2025 07:21:46 GMT-0400 (Eastern Daylight Time),1,1,Onsight,v4,Black,Sloper City,Peak Pursuit,Denver,USA
-Sat Jun 21 2025 07:21:46 GMT-0400 (Eastern Daylight Time),0,4,Redpoint,v15,Black,Crimp Fest,Peak Pursuit,Denver,USA
-Sat Jun 21 2025 07:21:46 GMT-0400 (Eastern Daylight Time),1,3,Redpoint,5.12c,Yellow,Dyno King,The Wall,Seattle,UK
-Sat Jun 21 2025 07:21:46 GMT-0400 (Eastern Daylight Time),0,2,Onsight,5.10c,Yellow,Crimp Fest,Peak Pursuit,Seattle,UK
+date,stiffness,rating,ascent_type,grade,color,climb_name,gym,location,country
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),0,3,Flash,v4,Blue,Dyno King,Peak Pursuit,Denver,USA
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),0,2,Redpoint,v4,Red,Sloper City,Peak Pursuit,Austin,Canada
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),1,2,Redpoint,v15,Orange,Dyno King,Peak Pursuit,Seattle,Canada
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),1,4,Redpoint,v6,Purple,Sloper City,Peak Pursuit,Seattle,Canada
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),0,1,Redpoint,v15,Purple,Sloper City,Climb Central,Denver,UK
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),1,5,Flash,v15,Red,Crimp Fest,Climb Central,Austin,Canada
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),3,3,Onsight,v3,Orange,Dyno King,Climb Central,Denver,UK
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),0,1,Flash,v7,Yellow,Crimp Fest,Peak Pursuit,Austin,USA
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),0,2,Flash,v6,Green,Crimp Fest,The Wall,Austin,USA
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),3,5,Onsight,v12,Yellow,Dyno King,The Wall,Seattle,Canada
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),0,5,Onsight,v8,Purple,Crimp Fest,Peak Pursuit,Seattle,USA
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),0,4,Redpoint,v14,Green,Sloper City,Climb Central,Denver,USA
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),1,3,Redpoint,v13,White,Dyno King,The Wall,Seattle,Canada
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),1,3,Flash,v2,Purple,Crimp Fest,The Wall,Austin,UK
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),1,2,Flash,v1,Orange,Dyno King,The Wall,Austin,Canada
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),2,5,Flash,v6,Purple,Dyno King,The Wall,Austin,UK
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),1,4,Onsight,v2,Orange,Dyno King,The Wall,Austin,Canada
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),1,4,Flash,v15,White,Sloper City,The Wall,Seattle,UK
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),1,1,Onsight,v3,Orange,Crimp Fest,Climb Central,Denver,UK
+Mon Jun 23 2025 06:17:00 GMT-0400 (Eastern Daylight Time),2,5,Onsight,v1,White,Dyno King,The Wall,Denver,USA

@@ -1,9 +1,9 @@
 export interface KayaLogBookHeaders {
-    datee?: Date;
+    date?: string | Date;
     stiffness?: number;
-    rating?: Rating;
+    rating?: number;
     ascent_type?: string;
-    grade?: BoulderGrades | SportGrades;
+    grade?: string;
     color?: string;
     climb_name?: string;
     gym?: string;
@@ -11,10 +11,38 @@ export interface KayaLogBookHeaders {
     country?: string;
 }
 
+export type KayaLogBookHeadersRawData = {
+  date?: string | Date;
+  stiffness?: string | number;
+  rating?: string | number;
+  ascent_type?: string;
+  grade?: string;
+  color?: string;
+  climb_name?: string;
+  gym?: string;
+  location?: string;
+  country?: string;
+} 
+
+//Need to create a convert function to convert string data to match the types
+export function convertKayaLogBookHeaders(data: KayaLogBookHeadersRawData ): KayaLogBookHeaders {
+    return {
+        date: data.date ? new Date(data.date) : undefined,
+        stiffness: data.stiffness !== undefined ? Number(data.stiffness) : undefined,
+        rating: data.rating !== undefined ? Number(data.rating) as Rating : undefined,
+        ascent_type: data.ascent_type,
+        grade: data.grade,
+        color: data.color,
+        climb_name: data.climb_name,
+        gym: data.gym,
+        location: data.location,
+        country: data.country,
+    };
+} 
 export type Rating = 1 | 2 | 3 | 4 | 5;
 
 export type BoulderGrades =
-  | "v1" | "v2" | "v3" | "v4" | "v5" | "v6" | "v7" | "v8"
+  "v0" | "v1" | "v2" | "v3" | "v4" | "v5" | "v6" | "v7" | "v8"
   | "v9" | "v10" | "v11" | "v12" | "v13" | "v14" | "v15";
 
 export type SportGrades =

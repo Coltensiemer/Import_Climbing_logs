@@ -3,8 +3,6 @@ import path from 'path';
 import { generateFakeKayaLogEntries } from './lib/CSVGeneratorKaya.ts'; 
 import { KayaLogBookHeaders } from './types/types.ts';
 
-
-
 function createCsvFolderWithData(folderName: string, fileName:string, headers:string[], data: KayaLogBookHeaders[]) {
   if (!fs.existsSync(folderName)) {
     fs.mkdirSync(folderName);
@@ -21,7 +19,7 @@ function createCsvFolderWithData(folderName: string, fileName:string, headers:st
 // Usage example:
 const folderName = 'csv-data';
 const fileName = 'fake_kaya_log.csv';
-const fakeEntries = generateFakeKayaLogEntries(10);
+const fakeEntries = generateFakeKayaLogEntries(20);
 
 // Get headers from the keys of the first entry
 const headers = fakeEntries.length > 0 ? Object.keys(fakeEntries[0]) : [];

@@ -7,7 +7,7 @@ Users can drag and drop their CSV file and visualize their climbing data.
 
 ## Features
 
-- [x] Drag-and-drop CSV import
+- [ ] Drag-and-drop CSV import
 - [ ] Support for Kaya, 8a.nu, and Climbing Boards CSV formats
 - [ ] Data parsing and normalization
 - [ ] Data visualization (charts, graphs, stats)
@@ -33,6 +33,15 @@ Users can drag and drop their CSV file and visualize their climbing data.
 - [ ] Data parsing and normalization
 - [ ] Support for Kaya, 8a.nu, and Climbing Boards CSV formats
 
+### Different data charts
+- [ ] Number of climbs per grade
+- [ ] Climbs per month
+- [ ] Climbs per season
+- [ ] Climbs per year
+- [ ] Grades per month
+- [ ] Average grade by month
+- [ ] Average grade by season
+
 ### Misc
 - [ ] Add error handling and helpful messages
 - [ ] Write unit and integration tests
@@ -42,7 +51,7 @@ Users can drag and drop their CSV file and visualize their climbing data.
 ## Getting Started
 
 1. Clone the repo  
-   `git clone https://github.com/yourusername/logbookclimbing.git`
+   `git clone https://github.com/coltensiemerlogbookclimbing.git`
 2. Install dependencies  
    `npm install`
 3. Run the development server  

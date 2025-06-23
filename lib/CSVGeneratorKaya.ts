@@ -5,7 +5,7 @@ export function generateFakeKayaLogEntry(): KayaLogBookHeaders {
   const gyms = ['Climb Central', 'The Wall', 'Peak Pursuit'];
   const locations = ['Seattle', 'Denver', 'Austin'];
   const countries = ['USA', 'Canada', 'UK'];
-  const grades = [...ALL_BOULDER_GRADES, ...ALL_SPORT_GRADES];
+  const grades = [...ALL_BOULDER_GRADES];
   const colors = ['Red', 'Blue', 'Green', 'Yellow', 'Black', 'White', 'Orange', 'Purple'];
   const ascentTypes = ['Flash', 'Redpoint', 'Onsight'];
   const climbNames = ['Dyno King', 'Sloper City', 'Crimp Fest'];
@@ -13,7 +13,7 @@ export function generateFakeKayaLogEntry(): KayaLogBookHeaders {
   const stiffnesses = [0, 1, 2, 3];
 
   return {
-    datee: new Date(),
+    date: new Date(),
     stiffness: stiffnesses[Math.floor(Math.random() * stiffnesses.length)],
     rating: ratings[Math.floor(Math.random() * ratings.length)],
     ascent_type: ascentTypes[Math.floor(Math.random() * ascentTypes.length)],
