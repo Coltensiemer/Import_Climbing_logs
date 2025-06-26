@@ -40,8 +40,8 @@ export const options = {
   },
 };
 
+
 export default function VerticalBarChart({ options, data }: VerticalBarChartProps) {
-  
   
   return (
     <div className="w-1/2 h-1/2">
