@@ -22,7 +22,22 @@ export type KayaLogBookHeadersRawData = {
   gym?: string;
   location?: string;
   country?: string;
-} 
+}
+
+export type tensionLogBookHeaders = {
+  board: Boards;
+  angle: string;
+  climb_name: string;
+  date?: Date;
+  logged_grade?: string;
+  is_benchmark?: boolean;
+  tires?: string | number;
+  is_mirror?: boolean;
+  session_count?: number;
+  tries_total?: number;
+  is_repeat?: boolean;
+  is_accent?: boolean;
+}
 
 //Need to create a convert function to convert string data to match the types
 export function convertKayaLogBookHeaders(data: KayaLogBookHeadersRawData ): KayaLogBookHeaders {
@@ -51,3 +66,16 @@ export type SportGrades =
   | "5.12a" | "5.12b" | "5.12c" | "5.12d"
   | "5.13a" | "5.13b" | "5.13c" | "5.13d"
   | "5.14a" | "5.14b" | "5.14c" | "5.14d";
+
+  export type fontGrade = 
+    "5a" | "5b" | "5c" | "6a" | "6a+" | "6b" | "6b+" |
+    "6c" | "6c+" | "7a" | "7a+" | "7b" | "7b+" |
+    "7c" | "7c+" | "8a" | "8a+" |
+    "8b" | "8b+" | "8c" | "8c+" |
+    "9a" 
+    
+  export type fontAndVGrade =
+    | fontGrade
+    | BoulderGrades;
+
+export type Boards = "Tension" | "Kaya" | "MoonBoard" | "KilterBoard"; 
