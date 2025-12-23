@@ -8,7 +8,7 @@ import (
     "io"
     "net/http"
 
-    "logbookclimbing/backend/models"
+    "logbookclimbing/backend/authModels"
 )
 
 type LoginRequest struct {

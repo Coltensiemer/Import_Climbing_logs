@@ -1,4 +1,6 @@
 import { KayaLogBookHeaders, KayaLogBookHeadersRawData, Rating} from '@/types/types';
+import { ColumnDef } from '@tanstack/react-table';
+import { kayaHeaderConfigs, desiredOrderforKayaHeaders } from './ColumnHeadersConfig';
 
 export const deriveGradeCounts = (data: KayaLogBookHeaders[]): Record<string, number> => { 
   const deriveGradeCounts: Record<string, number> = {};
@@ -40,14 +42,33 @@ export const deriveBoulderGradesInOrder = (data: KayaLogBookHeaders[]) => {
 
 
 
-// export const valuesConverter = (data): KayaLogBookHeaders[] => {
-//   return data.map((e) => ({
-//     ...e,
-//     stiffness: e.stiffness !== undefined ? Number(e.stiffness) : undefined,
-//     rating: e.rating !== undefined ? Number(e.rating) as Rating : undefined,
 
-//   }));
-// };
+// 2. Generate columns, using custom config if header matches KayaLogBookHeaders
+export function generateColumnHeadersbyCSV(data: object[]): ColumnDef<object>[] {
+  if (!data || data.length === 0) return [];
+  const headers = Object.keys(data[0]);
+  const kayaKeys = Object.keys(kayaHeaderConfigs);
+
+  const orderedHeaders = [
+    ...desiredOrderforKayaHeaders.filter(h => headers.includes(h)),
+    ...headers.filter(h => !desiredOrderforKayaHeaders.includes(h as keyof KayaLogBookHeaders)),
+  ];
+
+  return orderedHeaders.map(header => {
+    if (kayaKeys.includes(header)) {
+      return {
+        accessorKey: header,
+        ...kayaHeaderConfigs[header as keyof KayaLogBookHeaders],
+      };
+    }
+    // Default column config
+    return {
+      accessorKey: header,
+      header: header.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+      enableSorting: true,
+    };
+  });
+}
 
 
 

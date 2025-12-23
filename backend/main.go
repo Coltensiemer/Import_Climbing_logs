@@ -4,6 +4,9 @@ import (
     "encoding/json"
     "net/http"
     "log"
+
+		"logbookclimbing/backend/handlers/climbs"
+		"logbookclimbing/backend/models"
 )
 
 type Message struct {
@@ -17,6 +20,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
     http.HandleFunc("/api/hello", helloHandler)
+		http.HandleFunc("/api/login". loginHandler)
 
     log.Println("🚀 Go server listening on http://localhost:8080")
     log.Fatal(http.ListenAndServe(":8080", nil))
