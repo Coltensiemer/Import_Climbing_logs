@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SideNavigation } from "@/components/Client/SideNavigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,7 +44,7 @@ export default function RootLayout({
 
           {/* Content area with sidebar + main */}
           <div className="flex flex-1">
-            <aside className="w-64 border-r bg-slate-50 p-4 hidden md:block">
+            <aside className="w-64 border-r bg-slate-50 p-4 hidden md:flex md:flex-col">
               <ul className="space-y-2 text-sm">
                 <li className="font-medium">Navigation</li>
                 <li>
@@ -55,6 +56,9 @@ export default function RootLayout({
                   <a href="?view=graph" className="block py-2 px-2 rounded hover:bg-slate-100">Graph</a>
                 </li>
               </ul>
+              <div className="mt-auto">
+                <SideNavigation />
+              </div>
             </aside>
 
             <main className="flex-1 p-6 overflow-auto">
