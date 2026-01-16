@@ -15,6 +15,7 @@ export default function Home({ searchParams }: { searchParams: { view?: string }
   const columns = generateColumnHeadersbyCSV(parsedData);
 
   return (
+<<<<<<< Updated upstream
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20"> 
       {parsedData.length === 0 ? (
         <DragAndDrop onFileParsedAction={setParsedData} />
@@ -22,6 +23,13 @@ export default function Home({ searchParams }: { searchParams: { view?: string }
         <p className="text-gray-500">File parsed successfully!</p>
       )}
       {currentView === "table" && <DataTable data={parsedData} columns={columns} />}
+=======
+    <div className="grid items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+      {parsedData.length === 0 && <DragAndDrop onFileParsedAction={handleFileParseSuccess} />}
+      <div className="flex items-center justify-center w-full">
+        {currentView === "table" && <DataTable data={parsedData} columns={columns} />}
+      </div>
+>>>>>>> Stashed changes
       {/* {currentView === "graph" && <VerticalBarChart />} */}
     </div>
   );
