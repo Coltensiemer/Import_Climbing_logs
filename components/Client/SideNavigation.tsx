@@ -1,17 +1,19 @@
 'use client';
 
 import { Button } from "../ui/button";
-
-
-function removeLocalStorageData() {
-  if (typeof window !== "undefined") {
-    localStorage.removeItem('parsedData');
-    window.location.reload(); // Optional: refresh after clearing
-  }
-}
+import { useRouter } from "next/navigation";
 
 
 export function SideNavigation() { 
+	const router = useRouter();
+
+	function removeLocalStorageData() {
+		if (typeof window !== "undefined") {
+			localStorage.removeItem('parsedData');
+			router.push('/');
+		}
+	}
+
 	return (
 		<div>
 			<Button
