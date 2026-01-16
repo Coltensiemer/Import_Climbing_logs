@@ -1,4 +1,5 @@
 "use client";
+"use client";
 
 import { useState, useEffect, use} from "react";
 import { useRouter } from "next/navigation";
@@ -17,9 +18,30 @@ export default function Home({
   const router = useRouter();
   const params = use(searchParams);
   const currentView = params.view || "None";
+export default function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ view?: string }>;
+}) {
+  const router = useRouter();
+  const params = use(searchParams);
+  const currentView = params.view || "None";
 
   const [parsedData, setParsedData] = useState<KayaLogBookHeaders[]>([]);
   const columns = generateColumnHeadersbyCSV(parsedData);
+
+  const handleFileParseSuccess = (data: KayaLogBookHeaders[]) => {
+    setParsedData(data);
+    localStorage.setItem('parsedData', JSON.stringify(data));
+    router.push('?view=table');
+  };
+
+  useEffect(() => {
+  const saved = localStorage.getItem('parsedData');
+  if (saved) {
+    setParsedData(JSON.parse(saved));
+  }
+}, []);
 
   const handleFileParseSuccess = (data: KayaLogBookHeaders[]) => {
     setParsedData(data);
