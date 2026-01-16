@@ -5,9 +5,12 @@ import DragAndDrop from "@/components/ui/dragAndDrop";
 import { DataTable } from "@/components/dataTables/DataTable";
 import { KayaLogBookHeaders } from "@/types/types";
 import { generateColumnHeadersbyCSV } from "@/utils/DataHelper";
+import VerticalBarChart from "@/components/charts/verticalBarChart";
 
 
-export default function Home() {
+export default function Home({ searchParams }: { searchParams: { view?: string } }) {
+  const currentView = searchParams.view || "None";
+
   const [parsedData, setParsedData] = useState<KayaLogBookHeaders[]>([]);
   const columns = generateColumnHeadersbyCSV(parsedData);
 
@@ -18,7 +21,8 @@ export default function Home() {
       ) : (
         <p className="text-gray-500">File parsed successfully!</p>
       )}
-      {parsedData.length > 0 && <DataTable data={parsedData} columns={columns} />}
+      {currentView === "table" && <DataTable data={parsedData} columns={columns} />}
+      {/* {currentView === "graph" && <VerticalBarChart />} */}
     </div>
   );
 }
